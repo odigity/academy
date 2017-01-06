@@ -1,0 +1,134 @@
+
+body {
+    background-color: #ded29e;
+    font-family:      Tahoma, Geneva, sans-serif;
+    margin:           0px;
+    padding:          0px;
+}
+
+#page {
+    margin:           auto;
+    width:            960px;
+}
+
+header h1 {
+    text-align:       center;
+}
+
+nav ul {
+    border:           1px solid #ccc;
+    border-width:     1px 0;
+    list-style:       none;
+    margin:           0;
+    padding:          0;
+    text-align:       center;
+}
+
+nav li {
+    display:          inline;
+}
+
+nav a {
+    display:          inline-block;
+    padding:          10px;
+}
+
+main {
+    float:            left;
+    margin-right:     60px;
+    width:            600px;
+}
+
+aside {
+    float:            right;
+    width:            300px;
+}
+
+aside section {
+    background-color: #b3a580;
+    margin:           1em 0px;
+    padding:          0 0.5em;
+}
+
+footer {
+    clear:            both;
+    padding-bottom:   50px;
+    padding-top:      100px;
+    text-align:       center;
+}
+
+figure {
+    margin:           1em 0px;
+    width:            300px;
+}
+
+figcaption {
+    text-align:       center;
+}
+
+p {
+    text-indent:      1.5em;
+}
+
+p:first-letter {
+    font-size:        1.5em;
+}
+
+img {
+    margin:           0px;
+    padding:          0px;
+    width:            300px;
+}
+
+dt {
+    font-weight:      bold;
+}
+
+dd {
+    margin-bottom:    1em;
+}
+
+.monkey {
+    font-weight:      bold;
+}
+
+.population {
+    font-style:       italic;
+}
+
+.species {
+    font-size:        0.8em;
+    font-style:       italic;
+}
+
+.work {
+    font-style:       italic;
+}
+
+form {
+    margin:           auto;
+    width:            500px;
+}
+
+label {
+/*
+    display:          block;
+    margin-left:      100px;
+    width:            500px;
+*/
+}
+
+input {
+    border:           1px solid #999;
+    display:          block;
+    height:           25px;
+    margin-bottom:    1em;
+    width:            400px;
+}
+
+textarea {
+    display:          block;
+    height:           150px;
+    margin-bottom:    1em;
+    width:            400px;
+}

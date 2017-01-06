@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>All About Monkeys</title>
+  <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+</head>
+
+<body>
+  
+  <script type="text/javascript">
+  
+    // Form validation code will come here.
+    function validate()
+    
+      {  
+        if( document.myForm.field3.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.field3.focus() ;
+            return false;
+         }
+       if( document.myForm.field5.value == "" )
+         {
+            alert( "Please include a question!" );
+            document.myForm.field5.focus() ;
+            return false;
+         }
+    
+       return true; }
+  </script>
+  
+  <div id="page">
+
+    <header>
+      <h1>All About Monkeys</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#overview">Overview</a></li>
+          <li><a href="index.html#top5_test">Top 5</a></li>
+          <li><a href="index.html#actors">Actors</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#ask">Ask a Question</a></li>
+          <li><a href="otherpages/page2.html">Page 2</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="overview">
+        <p>Monkeys are <a href="https://en.wikipedia.org/wiki/Arboreal_locomotion">arboreal</a> mammals. They are in the primate order. Apes are the descendants of Old World monkeys. Monkeys are intelligent, social animals. They are famous for climbing trees
+          easily. Almost every monkey has a tail, even if it is very short.</p>
+        <p>The word "monkey" is not a scientific <hr />term. It is used for two rather different groups of <a href="https://en.wikipedia.org/wiki/Primate">primates</a>. The big distinction is between Old World monkeys and New World monkeys.</p>
+
+        <ul>
+          <li>Old world monkeys: Cercopithecidae</li>
+          <li>New World Monkeys: Platyrrhini or Ceboidea (same thing in effect)</li>
+        </ul>
+
+        <p>Both these groups are in the <a href="https://en.wikipedia.org/wiki/Order_%28biology%29#Hierarchy_of_ranks">infraorder</a> Simiiformes. That infraorder also includes the great apes and man.</p>
+        <p>Some monkeys live in trees. Others live partly on the ground. Most monkeys are mainly vegetarian, with a strong preference for fruit. However, they may eat a wide range of other food, including insects. Monkeys can live in forests and savannahs.
+          Monkeys do not live in deserts. They can live in snowy mountains. They most commonly live in rainforests, but there are none in the rainforests of Australia and New Guinea.</p>
+        <p>Some monkeys are small, about 15 centimetres (6 in) long and 120 grams (4.2 oz) in weight. Other monkeys are much larger, about 1 metre (3 ft 3 in) long and 35 kilograms (77 lb) in weight. A group of monkeys is called a "troop" of monkeys or a
+          "tribe" of monkeys.</p>
+      </section>
+
+      <section id="top5_test">
+        <h2>Top 5 Species by Population</h2>
+
+        <!-- This comment is here to explain the lines below   -->
+        
+        <ol>
+          <li>Human <span class="population">(7,250,000,000)</span></li>
+          <li>Müller's Bornean gibbon <span class="population">(250,000 – 375,000)</span></li>
+          <li>Gelada <span class="population">(200,000)</span></li>
+          <li>Common chimpanzee <span class="population">(172,700 – 299,700)</span></li>
+          <li>Western gorilla <span class="population">(95,000)</span></li>
+        </ol>
+      </section>
+
+      <section id="actors">
+        <h2>Monkey Actors in Film</h2>
+
+        <ul>
+          <li><span class="monkey">Binks</span> &mdash; Played Betsy in the 1995 movie <span class="work">Outbreak</span>. Also appeared in <span class="work">George of the Jungle</span> and <span class="work">Ace Ventura: Pet Detective</span>.
+            <span class="species">(capuchin)</span></li>
+          <li><span class="monkey">Govi</span> &mdash; Played Sophocles in the 1993-1994 sitcom <span class="work">Monkey Please, Sophocles!</span> that aired in Azerbaijan as a satire of the political climate in the country at the time.
+            <span class="species">(capuchin)</span></li>
+          <li><span class="monkey">Katie</span> &mdash; Played Marcel in <span class="work">Friends</span> and Los Angeles Angels' mascot Rally Monkey.
+            <span class="species">(white-headed capuchin)</span></li>
+          <li><span class="monkey">Finster</span> &mdash; Played Harvey Keitel's pet thief, Dodger, in the movie <span class="work">Monkey Trouble</span>.</li>
+          <li><span class="monkey">Crystal</span> &mdash; Played in <span class="work">The Hangover Part II</span>, <span class="work">Night at the Museum</span> and as "Annie's Boobs" in <span class="work">Community.</span></li>
+        </ul>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ (Frequently Asked Questions)</h2>
+
+        <dl>
+          <dt>What is the smallest monkey in the world?</dt>
+          <dd>At just 100 grams, the pygmy marmoset is known to be the smallest known species of monkey in the world. It averages at about 15cm in height with a 20cm long tail behind it. The pygmy marmoset is native to rainforests of the western Amazon Basin
+            in South America.</dd>
+          <dt>What about the largest?</dt>
+          <dd>The African baboon. They are also aggresive and dangerous to humans, so watch out!</dd>
+          <dt>Where does the word "monkey" come from?</dt>
+          <dd>The origins of the word "monkey" are unclear. It could come from Moneke, the name of the son of Martin the Ape in a medieval animal story. It appears also to be related to manikin, from the Dutch manneken ("little man").</dd>
+        </dl>
+
+        <h3 id="ask">Have a monkey question?</h3>
+
+        <form enctype="multipart/form-data" name="myForm" method="post" onsubmit="return(validate());" action="https://odigity.wufoo.com/forms/z63qiip0tr7o2o/#public">
+          <label><span class="form-label">Name</span> <input type="text" name="field3" /></label>
+          <label><span class="form-label">Email</span> <input type="email" name="field4" /></label>
+          <label><span class="form-label">Question</span> <textarea name="field5"></textarea></label>
+          <input name="saveForm" type="submit" value="Submit" />
+          <input type="hidden" name="idstamp" value="luDvaiVl9giI/CD7WI8Ex3U6hMTc5HdPI5d6rCeHQDM=" />
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <figure>
+        <a href="common_squirrel_monkey.jpg"><img src="common_squirrel_monkey.jpg" /></a>
+        <figcaption>Common squirrel monkey</figcaption>
+      </figure>
+
+      <section id="sciclass">
+        <h3>Scientific Classification</h3>
+
+        <table>
+          <tr>
+            <th>Kingdom</th>
+            <td>Animalia</td>
+          </tr>
+          <tr>
+            <th>Phylum</th>
+            <td>Chordata</td>
+          </tr>
+          <tr>
+            <th>Class</th>
+            <td>Mammalia</td>
+          </tr>
+          <tr>
+            <th>Order</th>
+            <td>Primates</td>
+          </tr>
+          <tr>
+            <th>Suborder</th>
+            <td>Haplorhini</td>
+          </tr>
+          <tr>
+            <th>Infraorder</th>
+            <td>Simiiformes</td>
+          </tr>
+        </table>
+      </section>
+
+      <figure>
+        <a href="human_evolutionary_tree.jpg"><img src="human_evolutionary_tree.jpg" /></a>
+        <figcaption>Human evolutionary tree</figcaption>
+      </figure>
+
+      <figure>
+        <a href="images/IMG_5777.JPG"><img src="images/IMG_5777.JPG" /></a>
+        <figcaption>Jon and Joey Bonnet macaque</figcaption>
+      </figure>
+
+      <figure>
+        <a href="goeldis_marmoset.jpg"><img src="goeldis_marmoset.jpg" /></a>
+        <figcaption>Goeldi's marmoset</figcaption>
+      </figure>
+
+      <figure>
+        <a href="pygmy_marmoset.jpg"><img src="pygmy_marmoset.jpg" /></a>
+        <figcaption>Pygmy marmoset</figcaption>
+      </figure>
+    </aside>
+
+    <footer>
+      &copy; 2016 Jon P.
+    </footer>
+
+  </div>
+</body>
+
+</html>
