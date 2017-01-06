@@ -11,4 +11,16 @@ Tools, apps, and docs for web dev students.
     * [All About Monkeys](sites/monkeys/) &mdash; a one-page informational site about monkeys
 * [templates](templates/) &mdash; example project templates of every variety
 
+## Viewing Apps, Sites, and Templates
+
+You can't see what a web page looks like by viewing the source code on GitHub.
+You need to load the file directly with your browser &mdash; preferably from a web server rather than your filesystem so you get HTTP urls and behavior instead of an ugly `file:///` url with broken JavaScript.
+
+To do that, first clone this repository to your local filesystem, then run a webserver from the repository root.
+I've included an `index.html` in the root with shortcut links to all sections for your convenience.
+
+### Quick Web Server Options
+
+* If you firebase-tools installed (`npm install firebase-tools`), just run `firebase serve`.  (Will bind to: [http://localhost:5000/](http://localhost:5000/))
+* If you don't, then consider installing the `serve` Node package (`npm install serve`), then simply run `serve`.  (Will bind to: [http://localhost:8080/](http://localhost:8080/))
 
