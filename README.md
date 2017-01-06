@@ -19,8 +19,9 @@ You need to load the file directly with your browser &mdash; preferably from a w
 To do that, first clone this repository to your local filesystem, then run a webserver from the repository root.
 I've included an `index.html` in the root with shortcut links to all sections for your convenience.
 
-### Quick Web Server Options
+### Quick Web Server Option
 
-* If you firebase-tools installed (`npm install firebase-tools`), just run `firebase serve`.  (Will bind to: [http://localhost:5000/](http://localhost:5000/))
-* If you don't, then consider installing the `serve` Node package (`npm install serve`), then simply run `serve`.  (Will bind to: [http://localhost:8080/](http://localhost:8080/))
+Install the `serve` Node package (`npm install serve`), then simply run `serve`.
+
+Will bind to: [http://localhost:3000/](http://localhost:3000/)
 
