@@ -1,0 +1,15 @@
+{
+    "rules": {
+        ".read": true,
+        ".write": false,
+        "stories": {
+            ".indexOn": [ "author", "created_at", "slug" ]
+        },
+        "users": {
+            "$uid": {
+                ".write": "$uid === auth.uid"
+            }
+        }
+    }
+}
+

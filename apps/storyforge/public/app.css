@@ -1,0 +1,151 @@
+a:link {
+    color:              #ef7c00;
+    font-weight:        bold;
+    text-decoration:    none;
+}
+
+a:hover {
+    text-decoration:    underline;
+}
+
+a:visited {
+    color:              #ef7c00;
+}
+
+ul.reset {
+    list-style:         none;
+    padding:            0;
+}
+
+/* --- LAYOUT --- */
+
+body {
+    background-color:   #e5e5e5;
+    font-family:        Helvetica, Arial, sans-serif;
+    margin:             0;
+}
+
+#app {
+    margin:             0 auto;
+    width:              80%;
+}
+
+#header {
+    background-color:   #f4f4f4;
+    box-shadow:         0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#footer {
+    background-color:   #f4f4f4;
+    text-align:         center;
+}
+
+nav h1 {
+    font-size:          2em;
+    margin:             0;
+    margin-left:        1em;
+}
+
+nav ul {
+    float:              right;
+    list-style:         none;
+    margin:             0;
+    padding:            0;
+}
+
+nav li {
+    display:            inline-block;
+    margin-right:       2em;
+    margin-top:         0.5em;
+}
+
+nav a:hover {
+    color:              #ee9900;
+    text-decoration:    none;
+}
+
+.left-column {
+    float:              left;
+    width:              65%;
+}
+
+.right-column {
+    float:              right;
+    width:              30%;
+}
+
+.panel {
+    background-color:   #fff;
+    box-shadow:         0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-top:         1em;
+    padding:            1em 2em;
+}
+
+.panel h2 {
+    color:              #2D566b;
+    font-size:          1.5em;
+    margin-top:         0;
+}
+
+.clearfix:after {
+    display:            block;
+    clear:              both;
+    content:            "";
+}
+
+/* --- AUTH --- */
+
+label {
+    display:            block;
+    font-weight:        bold;
+    margin-bottom:      0.5em;
+}
+
+input {
+    display:            block;
+    margin-bottom:      1em;
+}
+
+/* --- STORIES --- */
+
+.story-item img {
+    float:              left;
+    height:             4.5em;
+    margin-right:       1em;
+    width:              6em;
+}
+
+.story-item h3 {
+    font-size:          1em;
+    margin:             0;
+}
+
+.story-item h4 {
+    font-size:          0.85em;
+    font-style:         italic;
+    font-weight:        normal;
+    margin:             0;
+}
+
+.story-page h3 {
+    font-size:          0.85em;
+    font-style:         italic;
+    font-weight:        normal;
+    margin:             0;
+}
+
+.story-page img {
+    float:              right;
+    height:             18em;
+    width:              24em;
+}
+
+.node-content {
+}
+
+/* --- STORIES --- */
+
+.new-story input {
+    width:              50em;
+}
+

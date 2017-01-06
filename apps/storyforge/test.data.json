@@ -1,0 +1,127 @@
+{
+    "stories": {
+        "id1": {
+            "author"        : "LcCFOR0VXFb4bgJ9m9YcjDAUSm32",
+            "created_at"    : "1937-09-21T18:25:43.511Z",
+            "description"   : "A midget finds a ring, and a frog tries to steal it from him.",
+            "node_count"    : 0,
+            "slug"          : "the-hobbit",
+            "title"         : "The Hobbit"
+        },
+        "id2": {
+            "author"        : "tO3kxuiIZzUG9VzClBsrKmgugry2",
+            "created_at"    : "1943-04-14T18:25:43.511Z",
+            "description"   : "An architect decides to break rocks instead.",
+            "node_count"    : 0,
+            "slug"          : "the-fountainhead",
+            "title"         : "The Fountainhead"
+        },
+        "id3": {
+            "author"        : "LcCFOR0VXFb4bgJ9m9YcjDAUSm32",
+            "created_at"    : "1954-07-29T18:25:43.511Z",
+            "description"   : "A long walk to an overgrown trashcan with some twists and turns.",
+            "node_count"    : 0,
+            "slug"          : "lord-of-the-rings",
+            "title"         : "Lord of the Rings"
+        },
+        "id4": {
+            "author"        : "tO3kxuiIZzUG9VzClBsrKmgugry2",
+            "created_at"    : "1957-10-10T18:25:43.511Z",
+            "description"   : "An engineer decides to stop helping.",
+            "node_count"    : 0,
+            "slug"          : "atlas-shrugged",
+            "title"         : "Atlas Shrugged"
+        },
+        "id5": {
+            "author"        : "49jnK4TmYDdu6UXQlZKWXTeQWAb2",
+            "created_at"    : "1977-05-25T18:25:43.511Z",
+            "description"   : "Deadbeat dad tries to get his son to take over the family business.",
+            "first_node_id" : "id1",
+            "node_count"    : 0,
+            "slug"          : "star-wars",
+            "title"         : "Star Wars"
+        }
+    },
+    "nodes": {
+        "id5" : {
+            "id1": {
+                "content"       : "A long time ago, in a galaxy far, far away...",
+                "created_at"    : "2016-11-08T18:25:43.511Z",
+                "options"       : {
+                    "id2"       : "Join the Rebellion.",
+                    "id3"       : "Stay and farm more moisture."
+                }
+            },
+            "id2": {
+                "content"       : "You're flying down the trench to try to shoot a proton torpedo into the thermal exhaust port.",
+                "created_at"    : "2016-11-08T18:25:43.511Z",
+                "options"       : {
+                    "id4"       : "Use your targeting computer.",
+                    "id5"       : "Turn off your targeting computer and use the force."
+                }
+            },
+            "id3": {
+                "content"       : "You produce 182 gallons of water.",
+                "created_at"    : "2016-11-08T18:25:43.511Z"
+            },
+            "id4": {
+                "content"       : "You failed and died.",
+                "created_at"    : "2016-11-08T18:25:43.511Z"
+            },
+            "id5": {
+                "content"       : "You blow up the Death Star!",
+                "created_at"    : "2016-11-08T18:25:43.511Z"
+            }
+        }
+    },
+    "story_nodes": {
+        "id1": {
+            "content"       : "A long time ago, in a galaxy far, far away...",
+            "created_at"    : "2016-11-08T18:25:43.511Z",
+            "options"       : {
+                "id2"       : "Join the Rebellion.",
+                "id3"       : "Stay and farm more moisture."
+            },
+            "story_id"      : "id5"
+        },
+        "id2": {
+            "content"       : "You're flying down the trench to try to shoot a proton torpedo into the thermal exhaust port.",
+            "created_at"    : "2016-11-08T18:25:43.511Z",
+            "options"       : {
+                "id4"       : "Use your targeting computer.",
+                "id5"       : "Turn off your targeting computer and use the force."
+            },
+            "story_id"      : "id5"
+        },
+        "id3": {
+            "content"       : "You produce 182 gallons of water.",
+            "created_at"    : "2016-11-08T18:25:43.511Z",
+            "story_id"      : "id5"
+        },
+        "id4": {
+            "content"       : "You failed and died.",
+            "created_at"    : "2016-11-08T18:25:43.511Z",
+            "story_id"      : "id5"
+        },
+        "id5": {
+            "content"       : "You blow up the Death Star!",
+            "created_at"    : "2016-11-08T18:25:43.511Z",
+            "story_id"      : "id5"
+        }
+    },
+    "users": {
+        "1pICfxNXjKPxnSmBjyqo2eb0SWb2": {
+            "display_name"  : "Ofer Nave"
+        },
+        "49jnK4TmYDdu6UXQlZKWXTeQWAb2": {
+            "display_name"  : "George Lucas"
+        },
+        "LcCFOR0VXFb4bgJ9m9YcjDAUSm32": {
+            "display_name"  : "J.R.R. Tolkien"
+        },
+        "tO3kxuiIZzUG9VzClBsrKmgugry2": {
+            "display_name"  : "Ayn Rand"
+        }
+    }
+}
+
