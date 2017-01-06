@@ -12,7 +12,8 @@ Tools, apps, and docs for web dev students.
 * [templates](templates/) &mdash; example project templates of every variety
     * [All-in-One](templates/all-in-one/) &mdash; demonstrates combining your HTML, CSS, and JavaScript all in one file
     * [One-File-Per-Type](templates/one-file-per-type/) &mdash; demonstrates separating your HTML, CSS, and JavaScript in three separate files, one file per resource type
-
+    * [Multiple Scripts](templates/multiple-scripts/) &mdash; demonstrates separating your JavaScript into multiple files
+    
 ## Viewing Apps, Sites, and Templates
 
 You can't see what a web page looks like by viewing the source code on GitHub.
