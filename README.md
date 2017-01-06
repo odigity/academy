@@ -4,12 +4,12 @@ Tools, apps, and docs for web dev students.
 
 ## Table of Contents
 
-* [apps](apps/) &mdash; example web apps (client-side JavaScript only)
+* [apps/](apps/) &mdash; example web apps (client-side JavaScript only)
     * [StoryForge](apps/storyforge) &mdash; a multi-user choose-your-own-adventure authoring & browsing app (React, Redux, Firebase)
-* [docs](docs/) &mdash; general web dev educational resources
-* [sites](sites/) &mdash; example web sites (static HTML, CSS, and images)
+* [docs/](docs/) &mdash; general web dev educational resources
+* [sites/](sites/) &mdash; example web sites (static HTML, CSS, and images)
     * [All About Monkeys](sites/monkeys/) &mdash; a one-page informational site about monkeys
-* [templates](templates/) &mdash; example project templates of every variety
+* [templates/](templates/) &mdash; example project templates of every variety
     * [All-in-One](templates/all-in-one/) &mdash; demonstrates combining your HTML, CSS, and JavaScript all in one file
     * [One-File-Per-Type](templates/one-file-per-type/) &mdash; demonstrates separating your HTML, CSS, and JavaScript in three separate files, one file per resource type
     * [Multiple Scripts](templates/multiple-scripts/) &mdash; demonstrates separating your JavaScript into multiple files
