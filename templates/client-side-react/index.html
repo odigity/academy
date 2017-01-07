@@ -1,0 +1,46 @@
+<!DOCTYPE html>             <!-- Declare that this an HTML5 document. -->
+<html lang="en">            <!-- Declare the content language. -->
+<head>
+    <meta charset="utf-8">  <!-- Declare the document's character set. -->
+    <title>Client-Side React</title>   <!-- Set the page title.  Will be displayed at the top of the browser window and in bookmarks.  -->
+    <link rel="stylesheet" href="index.css">    <!-- Include styles from index.css. -->
+
+</head>
+<body>
+
+    <h1>Client-Side React Project Template</h1>
+
+    <p>
+        This template demonstrates including React and React-Router libraries (but without any server-side tooling),
+            and is based on the <a href="http://localhost:3000/templates/one-file-per-type/">One-File-Per-Type</a> template.
+    </p>
+
+    <p>See the <a href="https://github.com/odigity/academy/blob/master/docs/React.md">React doc</a> for more info.</p>
+
+    <hr>
+
+    <div id="root"></div>   <!-- It is a good convention to create an empty <div> tag with id="root" to mount your React app rather than mounting directly on <body>. -->
+
+    <!-- It is recommended to put <script> tags at the end of the <body>. -->
+
+    <!-- You can load vendor libraries directly from a CDN... -->
+    <!--
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+    <script src="https://unpkg.com/react@latest/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/react-router@4.0.0-alpha.6/umd/react-router.min.js"></script>
+    -->
+
+    <!-- ...but it's safer and faster to download copies into your own codebase. -->
+    <script src="vendor/babel.min.js"></script>
+    <script src="vendor/react.min.js"></script>
+    <script src="vendor/react-dom.min.js"></script>
+    <script src="vendor/react-router.min.js"></script>
+
+    <!-- Include index.js with type="text/babel" so Babel will transpile it before executing it.
+         This is necessary to allow us to use JSX in our app, but also let's us start using ES6 syntax in browsers that don't support it yet. -->
+    <script src="index.js" type="text/babel"></script>
+
+</body>
+</html>
+

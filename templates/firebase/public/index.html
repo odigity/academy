@@ -1,0 +1,51 @@
+<!DOCTYPE html>             <!-- Declare that this an HTML5 document. -->
+<html lang="en">            <!-- Declare the content language. -->
+<head>
+    <meta charset="utf-8">  <!-- Declare the document's character set. -->
+    <title>Firebase Project Template</title>   <!-- Set the page title.  Will be displayed at the top of the browser window and in bookmarks.  -->
+    <link rel="stylesheet" href="index.css">    <!-- Include styles from index.css. -->
+</head>
+<body>
+
+    <h1>Firebase Project Template</h1>
+
+    <p>
+        This template demonstrates using Firebase Hosting, and is based on the <a href="http://localhost:3000/templates/one-file-per-type/">One-File-Per-Type</a> template.
+        (To see Firebase Auth and Database examples, check out the <a href="http://localhost:3000/templates/react-on-firebase/public/">React on Firebase</a> template.)
+    </p>
+
+    <p>
+        Note: This example uses odigity's Firebase Project ID for deployment and hosting, which you don't have access to.
+        In order to try deploying it yourself, first create your own Firebase Project, then substitute your own Project ID in '.firebaserc'.
+        See the <a href="https://github.com/odigity/academy/blob/master/docs/Firebase.md">Firebase doc</a> for more info.
+    </p>
+
+    <p>
+        You can see this app hosted on Firebase here: <a href="https://project-template-hosting.firebaseapp.com/">https://project-template-hosting.firebaseapp.com/</a>
+    </p>
+
+    <h2>Template Structure Notes</h2>
+
+    <ul>
+        <li>
+            <b>public/ Folder</b> &mdash; Notice our app files have now been moved into a 'public/' subdirectory.
+            This is a better convention than putting your content directly in the project root.
+            It also works with Firebase's convention of specifying the location of your public folder in 'firebase.json'.
+            That folder will be served at the root of the hosted website, so 'public/index.html' will be served at
+                <a href="https://project-template-hosting.firebaseapp.com/">https://project-template-hosting.firebaseapp.com/</a>.
+        </li>
+        <li>
+            <b>firebase.json</b> &mdash; This is a JSON file that specifies your project's settings for the various Firebase services.
+            In this case, we're only using Firebase Hosting.
+        </li>
+        <li>
+            <b>.firebase.rc</b> &mdash; This is also a JSON file that mostly is just for specifying the Project ID of the default project to use when deploying.
+        </li>
+    </ul>
+
+    <!-- It is recommended to put <script> tags at the end of the <body>. -->
+    <script src="index.js"></script>    <!-- Include index.js as a JavaScript script file. -->
+
+</body>
+</html>
+

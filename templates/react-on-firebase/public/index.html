@@ -1,0 +1,60 @@
+<!DOCTYPE html>             <!-- Declare that this an HTML5 document. -->
+<html lang="en">            <!-- Declare the content language. -->
+<head>
+    <meta charset="utf-8">  <!-- Declare the document's character set. -->
+    <title>React on Firebase Project Template</title>   <!-- Set the page title.  Will be displayed at the top of the browser window and in bookmarks.  -->
+    <link rel="stylesheet" href="index.css">    <!-- Include styles from index.css. -->
+</head>
+<body>
+
+    <h1>React on Firebase Project Template</h1>
+
+    <p>
+        This template demonstrates using React with Firebase Hosting, Auth, and Database.
+        It is based on a combination of the <a href="http://localhost:3000/templates/client-side-react/public/">Client-Side React</a>
+            and <a href="http://localhost:3000/templates/firebase/public/">Firebase</a> templates.
+    </p>
+
+    <p>
+        See the <a href="https://github.com/odigity/academy/blob/master/docs/Firebase.md">Firebase</a>
+            and <a href="https://github.com/odigity/academy/blob/master/docs/React.md">React</a> docs for more info.
+    </p>
+
+    <p>
+        You can see this app hosted on Firebase here: <a href="https://project-template-react.firebaseio.com/">https://project-template-react.firebaseio.com/</a>
+    </p>
+
+    <h2>Template Structure Notes</h2>
+
+    <ul>
+        <li>
+            <b>database.rules.json</b> &mdash; This is a new file that you can use store
+                the <a href="https://firebase.google.com/docs/reference/security/database/">Firebase Database Rules</a> for your project.
+            You also have to tell Firebase which file contains your database rules, which you can see specified in the "database" section of 'firebase.json'.
+        </li>
+        <li>
+            <b>Rewrites</b> &mdash; We've also added a "rewrites" section to 'firebase.json' that tells the Firebase Hosting servers that
+                all requests should be redirected to index.html.
+            That way when if a user clicks on the 'About' link to go to '/about' URL, then hits refresh, the app will be reloaded instead of returning a 404 Not Found.
+        </li>
+    </ul>
+
+    <hr>
+
+    <div id="root"></div>   <!-- It is a good convention to create an empty <div> tag with id="root" to mount your React app rather than mounting directly on <body>. -->
+
+    <!-- It is recommended to put <script> tags at the end of the <body>. -->
+
+    <script src="vendor/babel.min.js"></script>         <!-- Downloaded from: https://unpkg.com/babel-standalone@latest/babel.min.js -->
+    <script src="vendor/react.min.js"></script>         <!-- Downloaded from: https://unpkg.com/react@latest/dist/react.min.js -->
+    <script src="vendor/react-dom.min.js"></script>     <!-- Downloaded from: https://unpkg.com/react-dom@latest/dist/react-dom.min.js -->
+    <script src="vendor/react-router.min.js"></script>  <!-- Downloaded from: https://unpkg.com/react-router@4.0.0-alpha.6/umd/react-router.min.js -->
+    <script src="vendor/firebase.js"></script>          <!-- Downloaded from: https://www.gstatic.com/firebasejs/3.6.4/firebase.js -->
+
+    <!-- Include index.js with type="text/babel" so Babel will transpile it before executing it.
+         This is necessary to allow us to use JSX in our app, but also let's us start using ES6 syntax in browsers that don't support it yet. -->
+    <script src="index.js" type="text/babel"></script>
+
+</body>
+</html>
+
