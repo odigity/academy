@@ -1,6 +1,6 @@
 # Academy
 
-Tools, apps, and docs for web dev students.
+Templates, demos, and docs for web dev students.
 
 ## Table of Contents
 
