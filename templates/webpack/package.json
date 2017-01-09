@@ -1,0 +1,23 @@
+{
+  "name": "webpack-example",
+  "version": "1.0.0",
+  "description": "This project template demonstrates using Webpack to bundle assets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odigity/academy.git"
+  },
+  "keywords": [ "html", "css", "javascript", "webpack", "example", "template" ],
+  "author": "Ofer Nave",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/odigity/academy/issues"
+  },
+  "homepage": "https://github.com/odigity/academy#readme",
+  "devDependencies": {
+    "webpack": "^2.2.0-rc.3"
+  }
+}
