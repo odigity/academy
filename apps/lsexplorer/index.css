@@ -1,0 +1,48 @@
+body {
+    background-color:   #eee;
+}
+
+form {
+    margin-bottom:      1em;
+}
+
+textarea {
+    height:             7em;
+}
+
+.item-list {
+    border:             1px solid black;
+    padding:            5px;
+}
+
+.item {
+    display:            flex;
+    flex-direction:     row;
+    margin-bottom:      0.5em;
+}
+
+.item-key {
+    font-weight:        bold;
+    padding-right:      5px;
+    text-align:         right;
+    width:              20%;
+}
+
+.delete-widget {
+    color:              #f00;
+    font-size:          0.8em;
+    font-weight:        normal;
+    margin-right:       5px;
+    text-decoration:    none;
+    visibility:         hidden;
+}
+.item-key:hover .delete-widget {
+    visibility:         visible;
+}
+
+.item-value {
+    padding-left:       5px;
+    width:              80%;
+}
+
+

@@ -1,0 +1,71 @@
+body {
+    background-color:   #eee;
+}
+
+form {
+    margin-bottom:      1em;
+}
+
+form input[name="description"] {
+    width:              40em;
+}
+
+input[type="text"] {
+    border:             1px solid black;
+    outline:            none;
+}
+
+input.valid {
+    outline:            2px solid green;
+}
+
+input.invalid {
+    outline:            2px solid red;
+}
+
+.task-list {
+    border:             1px solid black;
+    padding:            5px;
+}
+
+.task-list-row {
+    display:            flex;
+    flex-direction:     row;
+}
+
+.task-list-header {
+    font-weight:        bold;
+}
+
+.task {
+    margin-top:         0.5em;
+}
+
+.task-actions {
+    width:              15%;
+}
+
+.delete-widget {
+}
+
+.complete-widget {
+}
+
+.task-description {
+    width:              50%;
+}
+
+.task-created-at {
+    width:              15%;
+}
+
+.task-due-at {
+    width:              20%;
+}
+
+
+
+/*
+*/
+
+
