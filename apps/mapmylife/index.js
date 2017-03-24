@@ -14,6 +14,7 @@ let APPKEY = 'mapmylife';
 let APPDATA;
 
 function generateComparator (field) {
+    /* Returns a function that will compare two objects by the specified field, suitable for passing to Array#sort. */
     return function (a, b) {
         let result = 0;
         if (a[field] > b[field]) { result =  1; }
@@ -24,8 +25,11 @@ function generateComparator (field) {
 }
 
 function loadData () {
+    /* Loads data from localStorage, or creates new structure if no prev state exists. */
+
     let prevData = localStorage.getItem(APPKEY);
     if (prevData) {
+        // Parse prev state into APPDATA.
         APPDATA = JSON.parse(prevData);
     } else {
         // Create initial empty data store structure.
@@ -36,6 +40,7 @@ function loadData () {
 }
 
 function saveData () {
+    // Serialize APPDATA and write to localStorage.
     localStorage.setItem( APPKEY, JSON.stringify(APPDATA) );
 }
 
@@ -44,6 +49,8 @@ function saveData () {
 
 
 function setup () { console.log('setup()');
+    /* Configure event listeners for static content - the content not created by render(). */
+
     let approot = document.getElementById('approot');
     approot.addEventListener( 'click',    handleClick    );
     approot.addEventListener( 'focusout', handleFocusout );
@@ -82,8 +89,8 @@ function render () { console.log('render()');
     `;
 
     // Build task list.
-    let comparator = generateComparator('createdAt');
-    let tasks = Object.values(APPDATA.tasks);
+    let comparator = generateComparator('createdAt');   // Will use comparator to sort task list.
+    let tasks      = Object.values(APPDATA.tasks);
     tasks.sort(comparator).forEach(function (task) {
         let dueAt        = '-';
         let dueAtToolTip = 'No Due Date';
@@ -157,6 +164,7 @@ function handleDeleteTask (event) { console.log('handleDeleteTask()');
 function handleDueAtValidation (event) { console.log('handleDueAtValidation()');
     let value = event.target.value;
     let cl    = event.target.classList;
+
     if (value === '' ) {
         cl.remove('valid');
         cl.remove('invalid');
@@ -233,6 +241,7 @@ function handleNewTaskSubmit (event) { console.log('handleNewTaskSubmit()');
 }
 
 function handleTaskFieldSubmit (event) { console.log('handleTaskFieldSubmit()');
+    /* Update value in APPDATA, save to localStorage, then re-render to reset the UI. */
     let taskId = findTaskId(event.target);
     let value  = event.target.value;
     APPDATA.tasks[taskId][event.target.name] = value;

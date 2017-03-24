@@ -6,6 +6,8 @@ console.log( 'Hello world!' );
 
 
 function setup () { console.log('setup()');
+    /* Configure event listeners for static content - the content not created by render(). */
+
     let approot = document.getElementById('approot');
     approot.addEventListener( 'click',    handleClick    );
     approot.addEventListener( 'focusout', handleFocusout );
@@ -107,6 +109,7 @@ function handleEditItem (event) { console.log('handleEditItem()');
 }
 
 function handleEditItemSubmit (event) { console.log('handleEditItemSubmit()');
+    /* Update value in store, then re-render to reset the UI. */
     let key   = event.target.dataset.key;
     let value = event.target.value;
     localStorage.setItem( key, value );
