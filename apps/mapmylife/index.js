@@ -46,7 +46,7 @@ function saveData () {
 function setup () { console.log('setup()');
     let approot = document.getElementById('approot');
     approot.addEventListener( 'click',    handleClick    );
-    //approot.addEventListener( 'focusout', handleFocusout );
+    approot.addEventListener( 'focusout', handleFocusout );
 
     let form = document.getElementById('new-task');
     form.addEventListener( 'submit', handleNewTaskSubmit );
@@ -54,23 +54,6 @@ function setup () { console.log('setup()');
     let dueAt = document.querySelector('input[type="text"][name="dueAt"]');
     if (dueAt) {
         dueAt.addEventListener( 'input', handleDueAtValidation );
-    }
-}
-function handleDueAtValidation (event) { console.log('handleDueAtValidation()');
-    let value = event.target.value;
-    let cl    = event.target.classList;
-    if (value === '' ) {
-        cl.remove('valid');
-        cl.remove('invalid');
-    } else {
-        let m = moment(value);
-        if (m.isValid()) {
-            cl.remove('invalid');
-            cl.add('valid');
-        } else {
-            cl.remove('valid');
-            cl.add('invalid');
-        }
     }
 }
 
@@ -171,22 +154,39 @@ function handleDeleteTask (event) { console.log('handleDeleteTask()');
     save_and_render();
 }
 
-function handleEditItem (event) { console.log('handleEditItem()');
-    /* When user clicks on an Item Value, replace target with textarea for editing. */
-
-    let key   = event.target.dataset.key;
-    let value = localStorage.getItem(key);
-
-    // Create the new textarea.
-    let input = document.createElement('textarea');
-    input.className   = event.target.className;     // Assign same classes as target so styling is consistent.
-    input.dataset.key = key;                        // Store key in 'data-key' attribute for IDing later.
-
-    // Setup event listener for the Esc key, which will "undo" edit mode (and any unsaved changes) by simply re-rendering.
-    input.addEventListener( 'keydown', function (event) {
-        if (event.keyCode == 27) {
-            render();
+function handleDueAtValidation (event) { console.log('handleDueAtValidation()');
+    let value = event.target.value;
+    let cl    = event.target.classList;
+    if (value === '' ) {
+        cl.remove('valid');
+        cl.remove('invalid');
+    } else {
+        let m = moment(value);
+        if (m.isValid()) {
+            cl.remove('invalid');
+            cl.add('valid');
+        } else {
+            cl.remove('valid');
+            cl.add('invalid');
         }
+    }
+}
+
+function handleEditTaskDescription (event) { console.log('handleEditTaskDescription()');
+    /* When user clicks on an Task's description, replace target with input for editing. */
+
+    let taskId = findTaskId(event.target);
+    let value  = APPDATA.tasks[taskId].description;
+
+    // Create the new input.
+    let input = document.createElement('input');
+    input.name      = 'description';
+    input.className = event.target.className;       // Assign same classes as target so styling is consistent.
+
+    // Setup event listeners for the Return and Esc keys.
+    input.addEventListener( 'keydown', function (event) {
+        if (event.keyCode == 13) { handleTaskFieldSubmit(event); }
+        if (event.keyCode == 27) { render(); }      // Will "undo" edit mode (and any unsaved changes) by simply re-rendering.
     } );
 
     event.target.replaceWith(input);
@@ -194,6 +194,13 @@ function handleEditItem (event) { console.log('handleEditItem()');
 
     // By re-setting the value after setting focus, the cursor will end up at the *end* of the value instead of the beginning.
     input.value = value;
+}
+
+function handleFocusout (event) { console.log('handleFocusout()');
+    // We want to auto-save the value when an input loses focus, such as by pressing tab or clicking elsewhere.
+    if (event.target.tagName == 'INPUT') {
+        handleTaskFieldSubmit(event);
+    }
 }
 
 function handleNewTaskSubmit (event) { console.log('handleNewTaskSubmit()');
@@ -225,6 +232,12 @@ function handleNewTaskSubmit (event) { console.log('handleNewTaskSubmit()');
     save_and_render();
 }
 
+function handleTaskFieldSubmit (event) { console.log('handleTaskFieldSubmit()');
+    let taskId = findTaskId(event.target);
+    let value  = event.target.value;
+    APPDATA.tasks[taskId][event.target.name] = value;
+    save_and_render();
+}
 
 
 /** Utility **/

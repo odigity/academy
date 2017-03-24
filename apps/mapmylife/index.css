@@ -63,9 +63,9 @@ input.invalid {
     width:              20%;
 }
 
-
-
-/*
-*/
+.task input {
+    border:             none;
+    outline:            none;
+}
 
 
